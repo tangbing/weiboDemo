@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WBKeyBoardToolView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cL1-Q7-sVe" userLabel="上分割线">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Jj4-6D-c6S"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ul-NR-BuL" userLabel="content">
+                    <rect key="frame" x="0.0" y="1" width="375" height="42"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQ1-0b-Kmc">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="42"/>
+                            <state key="normal" image="compose_toolbar_picture"/>
+                            <state key="highlighted" image="compose_toolbar_picture_highlighted"/>
+                            <connections>
+                                <action selector="picture:" destination="iN0-l3-epB" eventType="touchUpInside" id="wvQ-5f-xUz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKY-ma-Jcv">
+                            <rect key="frame" x="75" y="0.0" width="75" height="42"/>
+                            <state key="normal" image="compose_mentionbutton_background"/>
+                            <connections>
+                                <action selector="at:" destination="iN0-l3-epB" eventType="touchUpInside" id="gOf-jh-tEp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iI-xh-PI7">
+                            <rect key="frame" x="150" y="0.0" width="75" height="42"/>
+                            <state key="normal" image="compose_trendbutton_background">
+                                <color key="titleColor" red="0.56955310420000005" green="1" blue="0.32517361830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <state key="highlighted" image="compose_trendbutton_background_highlighted"/>
+                            <connections>
+                                <action selector="topic:" destination="iN0-l3-epB" eventType="touchUpInside" id="HyM-2V-7Ck"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuB-QN-rCm">
+                            <rect key="frame" x="225" y="0.0" width="75" height="42"/>
+                            <state key="normal" image="compose_emoticonbutton_background"/>
+                            <state key="highlighted" image="compose_emoticonbutton_background_highlighted"/>
+                            <connections>
+                                <action selector="emoticon:" destination="iN0-l3-epB" eventType="touchUpInside" id="aKi-GX-g86"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TV5-A6-UA5">
+                            <rect key="frame" x="300" y="0.0" width="75" height="42"/>
+                            <state key="normal" image="compose_mentionbutton_background"/>
+                            <connections>
+                                <action selector="extra:" destination="iN0-l3-epB" eventType="touchUpInside" id="VWy-zO-128"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97648680210000005" green="0.9764502048" blue="0.97647500040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="RKY-ma-Jcv" firstAttribute="width" secondItem="tQ1-0b-Kmc" secondAttribute="width" id="16h-Ou-1eT"/>
+                        <constraint firstAttribute="bottom" secondItem="TV5-A6-UA5" secondAttribute="bottom" id="5jw-nm-q0V"/>
+                        <constraint firstItem="TV5-A6-UA5" firstAttribute="width" secondItem="tQ1-0b-Kmc" secondAttribute="width" id="8hR-wL-L5W"/>
+                        <constraint firstItem="3iI-xh-PI7" firstAttribute="width" secondItem="tQ1-0b-Kmc" secondAttribute="width" id="Dgb-bA-y4V"/>
+                        <constraint firstItem="TV5-A6-UA5" firstAttribute="top" secondItem="5ul-NR-BuL" secondAttribute="top" id="PfY-1G-nvM"/>
+                        <constraint firstAttribute="trailing" secondItem="TV5-A6-UA5" secondAttribute="trailing" id="Rop-D2-AX7"/>
+                        <constraint firstItem="3iI-xh-PI7" firstAttribute="top" secondItem="5ul-NR-BuL" secondAttribute="top" id="WCT-mK-9IT"/>
+                        <constraint firstAttribute="bottom" secondItem="EuB-QN-rCm" secondAttribute="bottom" id="Wf2-NX-sHv"/>
+                        <constraint firstAttribute="bottom" secondItem="RKY-ma-Jcv" secondAttribute="bottom" id="YQl-YH-LSf"/>
+                        <constraint firstItem="EuB-QN-rCm" firstAttribute="width" secondItem="tQ1-0b-Kmc" secondAttribute="width" id="faB-qw-gk1"/>
+                        <constraint firstItem="EuB-QN-rCm" firstAttribute="top" secondItem="5ul-NR-BuL" secondAttribute="top" id="gL4-bt-Rfj"/>
+                        <constraint firstAttribute="bottom" secondItem="tQ1-0b-Kmc" secondAttribute="bottom" id="hKW-nz-vc3"/>
+                        <constraint firstItem="tQ1-0b-Kmc" firstAttribute="top" secondItem="5ul-NR-BuL" secondAttribute="top" id="ipL-lD-2Ix"/>
+                        <constraint firstItem="RKY-ma-Jcv" firstAttribute="leading" secondItem="tQ1-0b-Kmc" secondAttribute="trailing" id="osr-DX-WfM"/>
+                        <constraint firstAttribute="bottom" secondItem="3iI-xh-PI7" secondAttribute="bottom" id="qML-uy-0fk"/>
+                        <constraint firstItem="EuB-QN-rCm" firstAttribute="leading" secondItem="3iI-xh-PI7" secondAttribute="trailing" id="qoX-ef-0nc"/>
+                        <constraint firstItem="RKY-ma-Jcv" firstAttribute="top" secondItem="5ul-NR-BuL" secondAttribute="top" id="uKy-8Q-jEk"/>
+                        <constraint firstItem="tQ1-0b-Kmc" firstAttribute="leading" secondItem="5ul-NR-BuL" secondAttribute="leading" id="uaG-5L-i1A"/>
+                        <constraint firstItem="3iI-xh-PI7" firstAttribute="leading" secondItem="RKY-ma-Jcv" secondAttribute="trailing" id="wik-lz-p1S"/>
+                        <constraint firstItem="TV5-A6-UA5" firstAttribute="leading" secondItem="EuB-QN-rCm" secondAttribute="trailing" id="zsj-mu-NEm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-iB-TXJ" userLabel="下分割线">
+                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Jhg-FP-XVB"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="faE-Do-jQm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.97648680210113525" green="0.97645020484924316" blue="0.97647500038146973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="cL1-Q7-sVe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4Ec-2T-Uc5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XDC-iB-TXJ" secondAttribute="bottom" id="9KX-Dc-pJ4"/>
+                <constraint firstAttribute="trailing" secondItem="5ul-NR-BuL" secondAttribute="trailing" id="KWM-DQ-tPQ"/>
+                <constraint firstAttribute="trailing" secondItem="XDC-iB-TXJ" secondAttribute="trailing" id="Whr-AZ-jtJ"/>
+                <constraint firstItem="XDC-iB-TXJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XSB-rH-Lrs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cL1-Q7-sVe" secondAttribute="trailing" id="YeB-9c-xWR"/>
+                <constraint firstItem="5ul-NR-BuL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dck-Cu-tuj"/>
+                <constraint firstItem="5ul-NR-BuL" firstAttribute="top" secondItem="cL1-Q7-sVe" secondAttribute="bottom" id="eNP-BL-9TL"/>
+                <constraint firstItem="cL1-Q7-sVe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hu9-go-fEJ"/>
+                <constraint firstItem="XDC-iB-TXJ" firstAttribute="top" secondItem="5ul-NR-BuL" secondAttribute="bottom" id="ryL-Ot-oq3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="emoticonButton" destination="EuB-QN-rCm" id="yoB-fT-XsS"/>
+            </connections>
+            <point key="canvasLocation" x="-111" y="-5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="compose_emoticonbutton_background" width="24" height="24"/>
+        <image name="compose_emoticonbutton_background_highlighted" width="24" height="24"/>
+        <image name="compose_mentionbutton_background" width="24" height="24"/>
+        <image name="compose_toolbar_picture" width="24" height="24"/>
+        <image name="compose_toolbar_picture_highlighted" width="24" height="24"/>
+        <image name="compose_trendbutton_background" width="24" height="24"/>
+        <image name="compose_trendbutton_background_highlighted" width="24" height="24"/>
+    </resources>
+</document>
