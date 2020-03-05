@@ -17,6 +17,11 @@
 
 #import "WBEmoticonInputView.h"
 
+<<<<<<< HEAD
+=======
+@interface
+
+>>>>>>> 552e11d7bab9c2133dbd1fee4a6ae410e844dd08
 
 @implementation WBEmoticonInputView
 
@@ -32,6 +37,7 @@
 
 - (instancetype)init
 {
+<<<<<<< HEAD
     if (self = [super init]) {
          self.frame = CGRectMake(0, 0, ATdeviceScaleWidth, kViewHeight);
            [self initGroups];
@@ -39,6 +45,13 @@
     return self;
 }
 
+=======
+    self = [super init];
+    self.frame = CGRectMake(0, 0, ATdeviceScaleWidth, kViewHeight);
+    [self initGroups];
+    
+}
+>>>>>>> 552e11d7bab9c2133dbd1fee4a6ae410e844dd08
 - (void)initGroups
 {
     
